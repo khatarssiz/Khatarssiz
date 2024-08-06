@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - katarssiz.com</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Lucida Sans Unicode', sans-serif;
+            background-color: #FFCC99; /* Color naranja claro */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: #d89236; /* Color de la barra de navegación */
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: rgb(0, 0, 0); /* Color normal del texto */
+            font-weight: normal;
+        }
+
+        .navbar a.active {
+            font-weight: bold;
+            color: #d64806d8; /* Color naranja fuerte */
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .registration-form {
+            text-align: center;
+            margin-top: calc(50vh - 5cm); /* Centra verticalmente y ajusta 5cm hacia abajo */
+            padding: 20px; /* Espacio alrededor del formulario */
+            background-color: #FFFFFF; /* Fondo blanco para el formulario */
+            border: 1px solid #FFCC99; /* Borde naranja claro */
+            border-radius: 5px; /* Bordes redondeados */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+            max-width: 400px; /* Ancho máximo del formulario */
+            margin: 0 auto; /* Centrar el formulario en la página */
+            position: relative; /* Necesario para el mensaje de éxito */
+        }
+
+        .registration-form h2 {
+            color: #dd9b43; /* Color naranja de título */
+        }
+
+        .registration-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .registration-form label {
+            margin-bottom: 10px; /* Espacio bajo las etiquetas */
+        }
+
+        .registration-form input[type="text"],
+        .registration-form input[type="email"],
+        .registration-form input[type="password"],
+        .registration-form button {
+            width: 100%; /* Ancho completo para los campos y botón */
+            padding: 15px; /* Espaciado interno */
+            margin-bottom: 15px; /* Espacio bajo los campos */
+            border: 1px solid #FFCC99; /* Borde naranja claro */
+            border-radius: 30px; /* Bordes ovalados */
+            font-size: 16px; /* Tamaño de fuente */
+            font-family: 'Lucida Sans Unicode', sans-serif; /* Fuente Lucida Sans Unicode */
+        }
+
+        .registration-form button {
+            background-color: #dd9b43; /* Color de fondo naranja */
+            color: white; /* Color de texto blanco */
+            cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+            transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+        }
+
+        .registration-form button:hover {
+            background-color: #FF6600; /* Cambio de color al pasar el cursor */
+        }
+
+        .success-message {
+            display: none; /* Ocultar por defecto */
+            position: absolute;
+            top: -40px; /* Posicionar arriba del formulario */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50; /* Fondo verde */
+            color: white; /* Texto blanco */
+            padding: 10px 20px;
+            border-radius: 5px; /* Bordes redondeados */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+        }
+    </style>
+</head>
+<body style="background-image: url('pictures/fondo.jpg');">
+
+<header>
+    <div class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Sobre Nosotros</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="recursos.html">Recursos</a>
+        <a href="habilidades.html">Habilidades Socioemocionales</a>
+        <a href="evaluacion.html">Evaluación</a>
+        <a href="comunidad.html">Comunidad</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="registro.html" class="active">Registro</a>
+    </div>
+</header>
+
+<main>
+    <div class="registration-form">
+        <h2>Registro de Usuario</h2>
+        <form action="#" id="registrationForm">
+            <label for="username">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Aceptar</button>
+        </form>
+        <div class="success-message" id="successMessage">¡Registro exitoso!</div>
+    </div>
+</main>
+
+<script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const successMessage = document.getElementById('successMessage');
+        successMessage.style.display = 'block';
+        setTimeout(() => {
+            successMessage.style.display = 'none';
+        }, 5000); // 5000 milisegundos = 5 segundos
+    });
+</script>
+
+</body>
+</html>

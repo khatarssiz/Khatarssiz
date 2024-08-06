@@ -1,0 +1,61 @@
+body {
+    font-family: 'Lucida Sans Unicode', sans-serif;
+    background-color: #FFCC99; /* Color naranja claro */
+    background-image: url('pictures/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+header {
+    background-color: #d89236; /* Gradiente en la barra de navegación */
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black; /* Color normal del texto */
+    font-weight: normal;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    color: #d64806d8; /* Color naranja fuerte */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.gallery {
+    margin-top: 20px;
+    width: 80%; /* Asegurarse de que la galería ocupe todo el ancho */
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: space-around; /* Espacio alrededor de las imágenes */
+    margin-bottom: 20px;
+}
+
+.gallery-img {
+    margin: 10px;
+    width: calc(25% - 20px); /* Ajuste de ancho para ocupar el espacio disponible */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.1);
+}

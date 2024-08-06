@@ -1,0 +1,69 @@
+body {
+    font-family: 'Lucida Sans Unicode', sans-serif;
+    background-color: #FFCC99; /* Color naranja claro */
+    background-image: url('pictures/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+header {
+    background-color: #d89236; /* Color de la barra de navegación */
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black; /* Color normal del texto */
+    font-weight: normal;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    color: #d64806d8; /* Color naranja fuerte */
+}
+
+main {
+    display: flex;
+    justify-content: center; /* Centrar los cuadros horizontalmente */
+    align-items: center; /* Centrar los cuadros verticalmente */
+    flex-direction: column; /* Centrar los cuadros en columna */
+    margin: 0; /* Eliminar márgenes para alinear correctamente */
+    height: 80vh; /* Altura del contenedor principal para centrar verticalmente */
+}
+
+.info-container {
+    display: flex;
+    flex-direction: row; /* Disposición en fila */
+    flex-wrap: wrap; /* Permitir que los cuadros se ajusten a la pantalla */
+    justify-content: center; /* Centrar los cuadros horizontalmente dentro del contenedor */
+    gap: 20px; /* Espacio entre los cuadros */
+    width: 100%; /* Ocupa todo el ancho de la página */
+    max-width: 1200px; /* Máximo ancho del contenedor (ajustable según necesidad) */
+}
+
+.info-box {
+    background-color: #dda55b; /* Color de fondo en los cuadros de información */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: justify; /* Justificar texto */
+    width: 30%; /* Ajustar tamaño aquí */
+    min-width: 250px; /* Ancho mínimo */
+    max-width: 300px; /* Ancho máximo */
+    transition: transform 0.3s;
+    color: black; /* Color negro para el texto */
+}
+
+.info-box h2 {
+    text-align: center; /* Centramos el título */
+    margin-bottom: 10px;
+}

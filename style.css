@@ -1,0 +1,144 @@
+body {
+    font-family: 'Lucida Sans Unicode', sans-serif;
+    background-color: #FFCC99; /* Color naranja claro */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #d89236; /* Color de la barra de navegación */
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0); /* Color normal del texto */
+    font-weight: normal;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    color: #d64806d8; /* Color naranja fuerte */
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.left-side {
+    text-align: center;
+    flex: 1; /* Para ocupar el espacio disponible */
+    padding: 20px; /* Añadir espacio alrededor de la imagen */
+}
+
+.right-side {
+    text-align: center;
+    flex: 1; /* Para ocupar el espacio disponible */
+    padding: 20px; /* Añadir espacio alrededor de la imagen */
+}
+
+.left-side img {
+    max-width: 100%; /* Ajustar imagen izquierda al 100% del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+}
+
+.right-side img {
+    max-width: 100%; /* Ajustar imagen derecha al 100% del contenedor */
+    height: auto; /* Mantener la proporción de la imagen */
+    width: 45%; /* Ajustar ancho al 80% del contenedor */
+}
+
+.right-side p {
+    font-size: 16px; /* Tamaño de fuente */
+    color: #ff8801; /* Color de texto */
+    margin-top: 20px; /* Espacio arriba del párrafo */
+    font-weight: bold; /* Texto en negritas */
+    text-align: justify; /* Justificar el texto */
+    width: 80%; /* Ajustar ancho del texto */
+    margin-left: auto; /* Centramos horizontalmente */
+    margin-right: auto; /* Centramos horizontalmente */
+}
+
+button {
+    background-color: #dd9b43;
+    color: white;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-family: 'Lucida Sans Unicode', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 35px; /* Añadir margen superior para mover el botón hacia abajo */
+}
+
+button:hover {
+    background-color: #FF6600;
+}
+
+.registration-form {
+    text-align: center;
+    margin-top: calc(50vh - 5cm); /* Centra verticalmente y ajusta 5cm hacia abajo */
+    padding: 20px; /* Espacio alrededor del formulario */
+    background-color: #FFFFFF; /* Fondo blanco para el formulario */
+    border: 1px solid #FFCC99; /* Borde naranja claro */
+    border-radius: 5px; /* Bordes redondeados */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centrar el formulario en la página */
+}
+
+.registration-form h2 {
+    color: #dd9b43; /* Color naranja de título */
+}
+
+.registration-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.registration-form label {
+    margin-bottom: 10px; /* Espacio bajo las etiquetas */
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"],
+.registration-form button {
+    width: 100%; /* Ancho completo para los campos y botón */
+    padding: 15px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espacio bajo los campos */
+    border: 1px solid #FFCC99; /* Borde naranja claro */
+    border-radius: 30px; /* Bordes ovalados */
+    font-size: 16px; /* Tamaño de fuente */
+    font-family: 'Lucida Sans Unicode', sans-serif; /* Fuente Lucida Sans Unicode */
+}
+
+.registration-form button {
+    background-color: #dd9b43; /* Color de fondo naranja */
+    color: white; /* Color de texto blanco */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
+}
+
+.registration-form button:hover {
+    background-color: #FF6600; /* Cambio de color al pasar el cursor */
+}
+
+.registration-form .corner-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 100px; /* Ancho máximo de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+}
