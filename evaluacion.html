@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluación - katarssiz.com</title>
     <link rel="stylesheet" href="style5.css">
-       
+</head>
+<body>
 
 <header>
     <div class="navbar">
@@ -39,61 +40,59 @@
     </div>
 
     <div class="buttons">
-        <button onclick="generateImage('reconocimiento')">Hacer Reconocimiento</button>
-    </div> 
+        <button class="download-btn" onclick="generateImage('reconocimiento')">Hacer Reconocimiento</button>
+    </div>
 
     <div class="result" id="result"></div>
-</div>
+</main>
 
 <script>
-    function generateImage(type) {
-        const name = prompt("Por favor, ingresa tu nombre:");
-        if (name) {
-            const isCertificado = type === 'certificado';
-            const imageWidth = isCertificado ? 1414 : 2000;
-            const imageHeight = isCertificado ? 2000 : 1414;
+function generateImage(type) {
+    const name = prompt("Por favor, ingresa tu nombre:");
+    if (name) {
+        const imageWidth = 1414;
+        const imageHeight = 1000;
 
-            // Crear un canvas
-            const canvas = document.createElement('canvas');
-            canvas.width = imageWidth;
-            canvas.height = imageHeight;
-            const context = canvas.getContext('2d');
+        // Crear un canvas
+        const canvas = document.createElement('canvas');
+        canvas.width = imageWidth;
+        canvas.height = imageHeight;
+        const context = canvas.getContext('2d');
 
-            // Cargar la imagen de la plantilla
-            const img = new Image();
-            img.crossOrigin = 'anonymous'; // Habilitar CORS
-            img.src = `templates/${type}.png`; // Ruta a la imagen de la plantilla
+        // Cargar la imagen de la plantilla
+        const img = new Image();
+        img.crossOrigin = 'anonymous'; // Habilitar CORS
+        img.src = `templates/${type}.png`; // Ruta a la imagen de la plantilla
 
-            img.onload = () => {
-                // Dibujar la imagen en el canvas
-                context.drawImage(img, 0, 0, imageWidth, imageHeight);
+        img.onload = () => {
+            // Dibujar la imagen en el canvas
+            context.drawImage(img, 0, 0, imageWidth, imageHeight);
 
-                // Añadir el texto del nombre
-                context.font = '80px Arial';
-                context.fillStyle = '#d89236';
-                context.textAlign = 'center';
-                context.fillText(name, imageWidth / 2, imageHeight / 2);
+            // Añadir el texto del nombre
+            context.font = '80px Arial';
+            context.fillStyle = '#d89236';
+            context.textAlign = 'center';
+            context.fillText(name, imageWidth / 2, imageHeight / 2);
 
-                // Convertir canvas a imagen
-                const imgData = canvas.toDataURL('image/png');
+            // Convertir canvas a imagen
+            const imgData = canvas.toDataURL('image/png');
 
-                // Mostrar imagen en la página
-                const resultDiv = document.getElementById('result');
-                resultDiv.innerHTML = `
-                    <img src="${imgData}" alt="${type}">
-                    <a href="${imgData}" download="${type}.png">Descargar ${type.charAt(0).toUpperCase() + type.slice(1)}</a>
-                `;
-            };
+            // Mostrar imagen en la página
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `
+                <img src="${imgData}" alt="${type}">
+                <a href="${imgData}" download="${type}.png" class="download-link">Descargar ${type.charAt(0).toUpperCase() + type.slice(1)}</a>
+            `;
+        };
 
-            img.onerror = () => {
-                alert('Error al cargar la imagen. intentalo mas tarde');
-            };
-        } else {
-            alert('Por favor, ingresa tu nombre.');
-        }
+        img.onerror = () => {
+            alert('Error al cargar la imagen. Asegúrate de que el archivo de la imagen existe y la ruta es correcta.');
+        };
+    } else {
+        alert('Por favor, ingresa tu nombre.');
     }
+}
 </script>
 
 </body>
 </html>
-
