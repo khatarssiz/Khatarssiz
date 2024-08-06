@@ -1,12 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluación - katarssiz.com</title>
     <link rel="stylesheet" href="style5.css">
-</head>
-<body>
+    <style>
+        body {
+            font-family: 'Lucida Sans Unicode', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('pictures/fondo.jpg');
+        }
+
+        .content {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ecd382;
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #d89236;
+        }
+
+        p {
+            text-align: justify;
+            color: #333;
+        }
+
+        .google-form {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            background-color: #dd9b43;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .buttons button:hover {
+            background-color: #FF6600;
+        }
+
+        .result {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .result img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #d89236;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .result a {
+            display: inline-block;
+            margin-top: 10px;
+            text-decoration: none;
+            background-color: #dd9b43;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .result a:hover {
+            background-color: #FF6600;
+        }
+    </style>
+
+
+
+
+       
 
 <header>
     <div class="navbar">
@@ -40,7 +121,7 @@
     </div>
 
     <div class="buttons">
-        <button class="download-btn" onclick="generateImage('reconocimiento')">Hacer Reconocimiento</button>
+        <button onclick="generateImage('reconocimiento')">Hacer Reconocimiento</button>
     </div>
 
     <div class="result" id="result"></div>
@@ -50,8 +131,9 @@
 function generateImage(type) {
     const name = prompt("Por favor, ingresa tu nombre:");
     if (name) {
-        const imageWidth = 1414;
-        const imageHeight = 1000;
+        const isCertificado = type === 'certificado';
+        const imageWidth = isCertificado ? 1414 : 2000;
+        const imageHeight = isCertificado ? 2000 : 1414;
 
         // Crear un canvas
         const canvas = document.createElement('canvas');
@@ -81,7 +163,7 @@ function generateImage(type) {
             const resultDiv = document.getElementById('result');
             resultDiv.innerHTML = `
                 <img src="${imgData}" alt="${type}">
-                <a href="${imgData}" download="${type}.png" class="download-link">Descargar ${type.charAt(0).toUpperCase() + type.slice(1)}</a>
+                <a href="${imgData}" download="${type}.png">Descargar ${type.charAt(0).toUpperCase() + type.slice(1)}</a>
             `;
         };
 
