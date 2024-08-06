@@ -1,0 +1,104 @@
+body {
+    font-family: 'Lucida Sans Unicode', sans-serif;
+    background-color: #FFCC99; /* Color naranja claro */
+    background-image: url('pictures/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+}
+
+header {
+    background-color: #d89236; /* Gradiente en la barra de navegación */
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black; /* Color normal del texto */
+    font-weight: normal;
+}
+
+.navbar a.active {
+    font-weight: bold;
+    color: #d64806d8; /* Color naranja fuerte */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.info-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px; /* Incrementa la separación superior */
+    gap: 30px; /* Añade espacio entre los cuadros */
+}
+
+.info-box {
+    background: rgba(230, 166, 49, 0.8); /* Color naranja claro */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+.info-box h2 {
+    margin-top: 0;
+}
+
+/* Estilos del formulario de Google */
+.google-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    width: 100%;
+}
+
+.google-form iframe {
+    border: none;
+    width: 100%;
+    max-width: 1000px; /* Ajusta el ancho máximo del iframe */
+    height: 800px; /* Ajusta la altura del iframe según sea necesario */
+    border: 4px solid #ccc; /* Añade borde si es necesario */
+}
+
+/* Estilos de los botones */
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.buttons button {
+    background-color: #d89236;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.buttons button:hover {
+    background-color: #b37a26;
+}
+
+/* Estilos del área de resultados */
+.result {
+    text-align: center;
+    margin-top: 20px;
+}
