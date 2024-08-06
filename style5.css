@@ -77,26 +77,43 @@ main {
 
 /* Estilos de los botones */
 .buttons {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 
-        .buttons button {
-            background-color: #dd9b43;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
+.buttons button.download-btn {
+    background-color: #d89236;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
 
-        .buttons button:hover {
-            background-color: #FF6600;
-        }
+.buttons button.download-btn:hover {
+    background-color: #b37a26;
+}
 
 /* Estilos del área de resultados */
 .result {
     text-align: center;
     margin-top: 20px;
+}
+
+/* Estilos del enlace de descarga */
+.download-link {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #d89236;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.download-link:hover {
+    background-color: #b37a26;
 }
