@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Lucida Sans Unicode', sans-serif;
+            background-color: #FFCC99; /* Color naranja claro */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin: 0;
+        }
+
+        header {
+            background-color: #d89236; /* Color de la barra de navegación */
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: rgb(0, 0, 0); /* Color normal del texto */
+            font-weight: normal;
+        }
+
+        .navbar a.active {
+            font-weight: bold;
+            color: #d64806d8; /* Color naranja fuerte */
+        }
+
+        main {
+            display: flex;
+            flex-direction: column; /* Columna para la sección de contacto */
+            align-items: center; /* Centrar horizontalmente */
+            margin: 20px;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-header img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .map-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: 0;
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-info .email-symbol {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        .contact-info .whatsapp-symbol {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #25D366; /* Color verde de WhatsApp */
+        }
+
+        .contact-info .email,
+        .contact-info .address,
+        .contact-info .whatsapp {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body style="background-image: url('pictures/fondo.jpg');">
+
+<header>
+    <div class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Sobre Nosotros</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="recursos.html">Recursos</a>
+        <a href="habilidades.html">Habilidades Socioemocionales</a>
+        <a href="evaluacion.html">Evaluación</a>
+        <a href="comunidad.html">Comunidad</a>
+        <a href="contacto.html" class="active">Contacto</a>
+        <a href="registro.html" >Registro</a>
+    </div>
+</header>
+
+<main>
+    <div class="contact-header">
+        <img src="pictures/imagen4.png" alt="Imagen de Contacto">
+    </div>
+
+    <div class="map-container">
+        <iframe
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC8ko0IXPWsBGAoUGXKxovb-7j0qRoGpHs&q=Universidad+de+Ecatepec+(UNE),+C.+Agricultura+Nte.+16,+San+Cristóbal+Centro,+55000+Ecatepec+de+Morelos,+Méx."
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <div class="contact-info">
+        <p class="address">
+            Direccion: C. Agricultura Nte. 16, San Cristóbal Centro, 55000 Ecatepec de Morelos, Méx.
+        </p>
+        <p>
+            <span class="whatsapp-symbol">📞</span>
+            <span class="whatsapp">+525557700633</span>
+        </p>
+        
+        <p>
+            <span class="email-symbol">✉️</span>
+            <span class="email">khatarssiz@gmail.com</span>
+        </p>
+        
+    </div>
+</main>
+
+</body>
+</html>

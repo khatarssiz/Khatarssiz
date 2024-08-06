@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos - katarssiz.com</title>
+    <link rel="stylesheet" href="style3.css">
+    <style>
+        body {
+            font-family: 'Lucida Sans Unicode', sans-serif;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #d89236;
+            padding: 10px;
+        }
+
+        .navbar a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-weight: normal;
+        }
+
+        .navbar a.active {
+            font-weight: bold;
+            color: #d64806d8;
+        }
+
+        .info-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+        }
+
+        .info-box {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .gallery-row {
+            display: flex;
+            justify-content: space-around; /* Espacio alrededor de las imágenes */
+            margin-bottom: 20px;
+        }
+
+        .gallery-img {
+            margin: 10px;
+            width: calc(33% - 20px); /* Ajuste de ancho para ocupar el espacio disponible */
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.1);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #d89236;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            position: relative;
+            overflow: auto;
+            max-height: 80%;
+        }
+
+        .close {
+            color: #eee1e1;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        .modal-text {
+            font-size: 16px;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .modal-button {
+            background-color: #dd9b43;
+            color: rgba(0, 0, 0, 0.973);
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .modal-button:hover {
+            background-color: #FF6600;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.html">Sobre Nosotros</a>
+        <a href="cursos.html" class="active">Cursos</a>
+        <a href="recursos.html">Recursos</a>
+        <a href="habilidades.html">Habilidades Socioemocionales</a>
+        <a href="evaluacion.html">Evaluación</a>
+        <a href="comunidad.html">Comunidad</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="registro.html">Registro</a>
+    </div>
+</header>
+
+<main>
+    <div class="info-container">
+        <div class="info-box">
+            <h2>Contenidos</h2>
+            <p>*Introducción a las habilidades socioemocionales.</p>
+            <p>*Autoconocimiento y autogestión.</p>
+            <p>*Empatía y relaciones interpersonales.</p>
+            <p>*Manejo del estrés y la ansiedad.</p>
+            <p>*Autoestima y motivación personal.</p>
+        </div>
+        <div class="info-box">
+            <h2>Actividades de aprendizaje</h2>
+            <p>*Actividades sensoriales.</p>
+            <p>*Caza del Tesoro.</p>
+            <p>*Narración de Cuentos.</p>
+            <p>*Exploración Independiente.</p>
+        </div>
+        <div class="info-box">
+            <h2>Técnicas de enseñanza</h2>
+            <p>*Gamificación.</p>
+            <p>*Método Montessori (Maria Montessori)</p>
+            <p>*Método Waldorf (Rudolf Steiner)</p>
+            <p>*Aula Invertida (Jonathan Bergmann y Aaron Sams)</p>
+        </div>
+    </div>
+    
+    <div class="gallery">
+        <div class="gallery-row">
+            <img src="pictures/i1.png" alt="Imagen 1" class="gallery-img" data-title="Curso 1. Introducción a las habilidades socioemocionales" data-content="Descripción del Curso:
+            En este primer curso titulado Introducción a las habilidades socioemocionales está diseñado para proporcionar a los docentes de preescolar las herramientas y conocimientos necesarios para fomentar el desarrollo socioemocional de los niños dentro de las aulas. Este curso online combina teoría y práctica para que los educadores puedan comprender la importancia de las habilidades socioemocionales y cómo integrarlas efectivamente en el currículo preescolar">
+            <img src="pictures/i2.png" alt="Imagen 2" class="gallery-img" data-title="Curso 2. Autoconocimiento y autogestión" data-content="Descripción del curso: El curso Autoconocimiento y Autogestión está diseñado para proporcionar a los docentes herramientas y estrategias para el desarrollo personal y profesional. A lo largo del curso, los participantes explorarán técnicas de introspección y gestión emocional que les permitirán mejorar su bienestar y desempeño en el ámbito educativo. Este curso busca empoderar a los docentes para que puedan reconocer sus fortalezas y áreas de mejora, así como gestionar eficazmente sus emociones y tiempo.">
+            <img src="pictures/i3.png" alt="Imagen 3" class="gallery-img" data-title="Curso 3. Empatía y relaciones interpersonales" data-content="Descripción del curso: Este curso está diseñado para docentes de educación preescolar con el objetivo de proporcionarles herramientas y estrategias que faciliten el desarrollo de la empatía y las relaciones interpersonales en sus estudiantes. A través de módulos interactivos y actividades prácticas, los docentes aprenderán a fomentar la comprensión emocional y la habilidad para establecer relaciones positivas, habilidades fundamentales para el desarrollo social y emocional de los niños.
+            ">
+        </div>
+        <div class="gallery-row">
+            <img src="pictures/i4.png" alt="Imagen 4" class="gallery-img" data-title="Curso 4. Manejo del estrés y la ansiedad" data-content="Descripción del curso: Este curso está diseñado para docentes de educación preescolar con el objetivo de proporcionarles herramientas y estrategias para identificar, comprender y gestionar el estrés y la ansiedad en sus estudiantes. A través de módulos interactivos y actividades prácticas, los docentes aprenderán a crear un entorno de aula que minimice el estrés y la ansiedad, y a implementar técnicas que ayuden a los niños a desarrollar habilidades de manejo emocional.
+            
+            ">
+            <img src="pictures/i5.png" alt="Imagen 5" class="gallery-img" data-title="Curso 5" data-content="Información del curso 5...">
+            <img src="pictures/i6.png" alt="Imagen 6" class="gallery-img" data-title="Curso 6" data-content="Información del curso 6...">
+        </div>
+    </div>
+</main>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title"></h2>
+        <p class="modal-text"></p>
+        <button class="modal-button">Realizar Curso</button>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const modal = document.getElementById("myModal");
+        const modalTitle = document.querySelector(".modal-title");
+        const modalText = document.querySelector(".modal-text");
+        const modalButton = document.querySelector(".modal-button");
+        const closeBtn = document.querySelector(".close");
+        const galleryImages = document.querySelectorAll(".gallery-img");
+
+        galleryImages.forEach((img, index) => {
+            img.addEventListener("click", () => {
+                modalTitle.textContent = img.getAttribute("data-title");
+                modalText.textContent = img.getAttribute("data-content");
+                modal.style.display = "block";
+                
+                modalButton.onclick = function() {
+                    window.open(`curso${index + 1}.html`, '_blank');
+                }
+            });
+        });
+
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    });
+</script>
+
+</body>
+</html>

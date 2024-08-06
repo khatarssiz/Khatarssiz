@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad</title>
+    <link rel="stylesheet" href="style6.css">
+</head>
+<body style="background-image: url('pictures/fondo.jpg');"></body>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Sobre Nosotros</a>
+            <a href="cursos.html">Cursos</a>
+            <a href="recursos.html">Recursos</a>
+            <a href="habilidades.html">Habilidades Socioemocionales</a>
+            <a href="evaluacion.html">Evaluación</a>
+            <a href="comunidad.html" class="active">Comunidad</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="registro.html">Registro</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="image-container">
+            <button class="comment-button" onclick="scrollToComments()">Comentar</button>
+            <img src="pictures/imagen.png" alt="Comunidad" class="main-image">
+        </div>
+        <div class="image1-container">
+            <img src="pictures/imagen3.png" alt="Comunidad" class="main-image">
+        </div>
+
+        <div class="comments-section">
+            <div class="comment-box">
+                <p>¡Me encanta!
+                    He estado utilizando la plataforma  
+                    de	Khatarssiz	para	mejorar	mis
+                    habilidades	socioemocionales
+                    como docente de preescolar y he
+                    notado una gran diferencia en mi
+                    capacidad para manejar
+                    situaciones	emocionales	en	el
+                    aula. Los módulos son interactivos
+                    y están llenos de actividades  prácticas 
+                    que realmente ayudan a  aplicar lo aprendido. 
+                    Recomiendo  esta plataforma a cualquier  
+                    maestro que desee mejorar en  este aspecto 
+                    tan crucial de la  enseñanza.
+                    <br><span class="name">Olivia Yescas</span> 
+                    <br><span class="role">DOCENTE</span></p>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="comment-box">
+                <p>¡Totalmente  recomendada!
+                    Los	cursos	están	muy	bien
+                    estructurados	y	adaptados	a
+                    nuestras necesidades como  docentes 
+                    de preescolar. Desde  que empecé a 
+                    usarla, me siento  más seguro y preparado
+                    para  apoyar emocionalmente a mis  pequeños 
+                    estudiantes. ¡Una  inversión de tiempo 
+                    en nuestra  formación que vale la pena!
+                    <br><span class="name">Giovanni Sanchez</span> 
+                    <br><span class="role">DOCENTE</span></p>
+                <div class="stars">★★★★★</div>
+            </div>
+            <div class="comment-box" id="add-comment-box" onclick="showCommentForm()">
+                <p>Agregar opinión</p>
+                <div class="add-circle">+</div>
+            </div>
+        </div>
+
+
+        <div class="comment-form" id="comment-form">
+            <h3>Agregar Comentario</h3>
+            <form id="commentForm">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="role">Ocupación:</label>
+                <input type="text" id="role" name="role" required>
+                
+                <label for="comment">Comentario:</label>
+                <textarea id="comment" name="comment" required></textarea>
+                
+                <label for="rating">Calificación:</label>
+                <div class="star-rating">
+                    <input type="radio" id="5-stars" name="rating" value="5" required>
+                    <label for="5-stars" class="star">&#9733;</label>
+                    <input type="radio" id="4-stars" name="rating" value="4">
+                    <label for="4-stars" class="star">&#9733;</label>
+                    <input type="radio" id="3-stars" name="rating" value="3">
+                    <label for="3-stars" class="star">&#9733;</label>
+                    <input type="radio" id="2-stars" name="rating" value="2">
+                    <label for="2-stars" class="star">&#9733;</label>
+                    <input type="radio" id="1-star" name="rating" value="1">
+                    <label for="1-star" class="star">&#9733;</label>
+                </div>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script1.js"></script>
+</body>
+</html>
