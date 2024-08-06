@@ -77,25 +77,23 @@ main {
 
 /* Estilos de los botones */
 .buttons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
 
-.buttons button {
-    background-color: #d89236;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 10px;
-}
+        .buttons button {
+            background-color: #dd9b43;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
 
-.buttons button:hover {
-    background-color: #b37a26;
-}
+        .buttons button:hover {
+            background-color: #FF6600;
+        }
 
 /* Estilos del área de resultados */
 .result {
